@@ -10,4 +10,5 @@ def read_names_from_csv(filepath: str) -> list:
     return names
 
 def _str_(self):
+    '''Returns a string representation of the Seat object, including whether it is free and the name of the occupant if it is occupied.'''
     return f"Seat(free={self.free}, occupant='{self.occupant}')"

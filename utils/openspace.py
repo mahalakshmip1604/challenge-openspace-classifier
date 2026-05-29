@@ -48,6 +48,7 @@ class Openspace:
                         file.write("  - Free\n")
                     else:
                         file.write(f"  - {seat.occupant}\n")
-    def _str_(self):       
+    def _str_(self):     
+        '''Returns a string representation of the Openspace object, including the number of tables and the details of each table.'''  
         return f"Openspace(assign_tables={self.assign_tables}, tables={self.tables})"
 

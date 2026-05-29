@@ -19,6 +19,21 @@ def main():
     capacity_user_input = input("Enter the capacity of each table (default 4): ")
     capacity = int(capacity_user_input) if capacity_user_input.strip() else 4
 
+    # Adding new colleagues if there is still place at the tables.
+    if tables * capacity > len(names):
+        print(f"Still place for new colleagues, you can add more names to the list.")        
+        print("Enter items one by one. Type 'done' to finish.\nAlso it stops when capacity is reached.")
+        items = []
+        while True:
+            user_entry = input("Enter Name: ")
+            if user_entry.lower() == 'done' or len(items) + len(names) >= tables * capacity:
+                break
+            items.append(user_entry)
+        for input_name in items:
+            names.append(input_name)
+    else:
+        print(f"Warning: The total seating capacity ({tables * capacity}) is less than the number of colleagues ({len(names)}). Some colleagues will not be assigned a seat.")  
+    
     # create an OpenSpace
     open_space = OpenSpace(number_of_tables=tables, table_capacity=capacity)
 

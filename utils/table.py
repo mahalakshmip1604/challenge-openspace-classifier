@@ -14,9 +14,7 @@ class Seat:
         if self.free:
             self.occupant = name
             self.free = False
-            print(f"{name} has been assigned to the seat.")
-        else:
-            print(f"Sorry, the seat is already occupied by {self.occupant}.")
+           
 
     def remove_occupant(self):
             """Removes the occupant from the seat if it is occupied."""
@@ -26,9 +24,9 @@ class Seat:
                 self.free = True
                 return removed_person
             else:
-                 print("The seat is already free.")
-                 return None 
+                return None 
     def _str_(self):
+        '''Returns a string representation of the Seat object, including whether it is free and the name of the occupant if it is occupied.'''
         return f"Seat(free={self.free}, occupant='{self.occupant}')"
     
 class Table:
@@ -65,4 +63,5 @@ class Table:
         return count   
     
     def _str_(self):
+        '''Returns a string representation of the Table object, including its capacity and the status of its seats.'''
         return f"Table(capacity={self.capacity}, seats={self.seats})"
