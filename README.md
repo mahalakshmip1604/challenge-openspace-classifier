@@ -1,40 +1,44 @@
-# OpenSpace Organizer #
-forthebadge made-with-python
+# OpenSpace Organizer
+[![forthebadge made-with-python](https://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-🏢 Description
 
-Your company moved to a new office at CEVI Ghent. Its an openspace with 6 tables of 4 seats. As many of you are new colleagues, you come up with the idea of changing seats everyday and get to know each other better by working side by side with your new colleagues.
+## 🏢 Description
+
+Your company moved to a new office at CEVI Ghent. Its an openspace with 6 tables of 4 seats. As many of you are new colleagues, you come up with the idea of changing seats everyday and get to know each other better by working side by side with your new colleagues. 
 
 This script runs everyday to re-assign everybody to a new seat.
 
+![coworking_img](https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGRpdmVyc2UlMjB0ZWFtfGVufDB8fDB8fHwy)
 
-```text
+## 📦 Repo structure
 
-📦 Repo structure
+```
 .
-├── utils/
+├── src/
 │   ├── openspace.py
 │   ├── table.py
 │   └── file_utils.py
 ├── main.py
 ├── new_colleagues.csv
-├── notebook_guide.ipynb
 ├── output.csv
 └── README.md
+```
 
-🛎️ Usage
+## 🛎️ Usage
+
 1. Clone the repository to your local machine.
-2. To run the script, you can execute the main.py file from your command line:
 
-# main.py Description: 
+2. To run the script, you can execute the `main.py` file from your command line:
 
-User inputs will be taken for Tables and its capacity count.
-The script reads your input file, and organizes your colleagues to random seat assignments. The resulting seating plan is displayed in your console and also saved to an "output.csv" file in your root directory.
+```
+   python main.py
+```
 
-Added addtional feature of adding new members if the capacity is not full.
+3. User inputs will be taken for Tables and its capacity count.
+    The script reads your input file, and organizes your colleagues to random seat assignments. The resulting seating plan is displayed in your console and also saved to an "output.csv" file in your root directory.
+Added addtional feature of adding new members if the capacity is not full. 
 
-from utils.openspace import Openspace as OpenSpace
-from utils.file_utils import read_names_from_csv
+```python
 def main():
     """Main function to execute the open space seating arrangement.
     This function reads colleague names from a CSV file, prompts the user for the number of tables and their capacity,
@@ -85,11 +89,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
+## ⏱️ Timeline
 
-⏱️ Timeline
 This project took two days for completion.
 
-📌 Personal Situation
-This project was done as part of the AI Boocamp at BeCode.org.
+## 📌 Personal Situation
+This project was done as part of the AI Boocamp at BeCode.org. 
 
-Connect with me in [LinkedIn](www.linkedin.com/in/mahalakshmi-palanivel-4b6701296)
+Connect with me on [LinkedIn](www.linkedin.com/in/mahalakshmi-palanivel-4b6701296).
